@@ -98,7 +98,7 @@ class VideoPlayViewController: UIViewController {
     
     
     @objc fileprivate func onChangeVideoButtonPressed() {
-        let urls = ["http://wvideo.spriteapp.cn/video/2016/0328/56f8ec01d9bfe_wpd.mp4",
+        let urls = ["http://www.streambox.fr/playlists/x36xhzz/url_6/193039199_mp4_h264_aac_hq_7.m3u8",
                     "http://baobab.wdjcdn.com/1456117847747a_x264.mp4",
                     "http://baobab.wdjcdn.com/14525705791193.mp4",
                     "http://baobab.wdjcdn.com/1456459181808howtoloseweight_x264.mp4",
@@ -189,6 +189,8 @@ class VideoPlayViewController: UIViewController {
     // 设置播放器单例，修改属性
     func setupPlayerManager() {
         resetPlayerManager()
+        BMPlayerConf.timeSliderTimeInterval = TimeInterval(0.1)
+        BMPlayerConf.allowLog = true
         switch (index.section,index.row) {
         // 普通播放器
         case (0,0):
@@ -224,9 +226,9 @@ class VideoPlayViewController: UIViewController {
      准备播放器资源model
      */
     func preparePlayerItem() -> BMPlayerResource {
-        let res0 = BMPlayerResourceDefinition(url: URL(string: "http://baobab.wdjcdn.com/1457162012752491010143.mp4")!,
+        let res0 = BMPlayerResourceDefinition(url: URL(string: "http://qn-hunter-photo.fishtrip.cn/1482808387?e=1514454870&token=nMq5NmyPkrs9m3DNnIQwz9UYNL7RZjfFiTpCZ851:ErDVE7iPXhEH85HOjjliydVk_bc=")!,
                                               definition: "高清")
-        let res1 = BMPlayerResourceDefinition(url: URL(string: "http://baobab.wdjcdn.com/1457162012752491010143.mp4")!,
+        let res1 = BMPlayerResourceDefinition(url: URL(string: "http://qn-hunter-photo.fishtrip.cn/1482808387?e=1514454870&token=nMq5NmyPkrs9m3DNnIQwz9UYNL7RZjfFiTpCZ851:ErDVE7iPXhEH85HOjjliydVk_bc=")!,
                                               definition: "标清")
         
         let asset = BMPlayerResource(name: "周末号外丨中国第一高楼",

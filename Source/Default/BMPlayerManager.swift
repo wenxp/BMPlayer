@@ -34,6 +34,9 @@ open class BMPlayerManager {
     open var topBarShowInCase = BMPlayerTopBarShowCase.always
     
     open var animateDelayTimeInterval = TimeInterval(5)
+
+    //进度条刷新时间间隔
+    open var timeSliderTimeInterval = TimeInterval(0.5)
     
     /// should show log
     open var allowLog  = false

@@ -95,6 +95,9 @@ open class BMPlayerLayerView: UIView {
     
     /// 计时器
     var timer       : Timer?
+
+    //计时器刷新时间间隔
+    open var timeInterval = TimeInterval(0.5)
     
     fileprivate var urlAsset: AVURLAsset?
     
@@ -285,7 +288,8 @@ open class BMPlayerLayerView: UIView {
     
     func setupTimer() {
         timer?.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(playerTimerAction), userInfo: nil, repeats: true)
+//        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(playerTimerAction), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(playerTimerAction), userInfo: nil, repeats: true)
         timer?.fireDate = Date()
     }
     

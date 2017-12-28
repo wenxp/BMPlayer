@@ -434,6 +434,7 @@ open class BMPlayer: UIView {
     
     fileprivate func preparePlayer() {
         playerLayer = BMPlayerLayerView()
+        playerLayer!.timeInterval = BMPlayerConf.timeSliderTimeInterval
         playerLayer!.videoGravity = videoGravity
         insertSubview(playerLayer!, at: 0)
         playerLayer!.snp.makeConstraints { (make) in
