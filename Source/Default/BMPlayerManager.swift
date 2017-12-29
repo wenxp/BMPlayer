@@ -40,7 +40,9 @@ open class BMPlayerManager {
     
     /// should show log
     open var allowLog  = false
-    
+
+    //是否允许滑动手势
+    open var enablePanGesture = true
     /// use gestures to set brightness, volume and play position
     open var enableBrightnessGestures = true
     open var enableVolumeGestures = true
